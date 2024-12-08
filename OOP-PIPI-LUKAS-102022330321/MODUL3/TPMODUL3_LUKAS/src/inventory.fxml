@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="InventoryController">
+    <children>
+        <TableView fx:id="tableView" layoutX="50.0" layoutY="50.0" prefHeight="300.0" prefWidth="500.0">
+            <columns>
+                <TableColumn fx:id="columnAlbum" prefWidth="150.0" text="Album Name" />
+                <TableColumn fx:id="columnArtist" prefWidth="150.0" text="Artist" />
+                <TableColumn fx:id="columnAvailable" prefWidth="100.0" text="Available" />
+                <TableColumn fx:id="columnTotal" prefWidth="100.0" text="Total" />
+            </columns>
+        </TableView>
+
+        <VBox layoutX="600.0" layoutY="50.0" spacing="10">
+            <VBox spacing="5">
+                <Text text="Album Name:" />
+                <TextField fx:id="albumField" prefWidth="150.0" promptText="Enter Album Name" />
+            </VBox>
+
+            <VBox spacing="5">
+                <Text text="Artist:" />
+                <TextField fx:id="artistField" prefWidth="150.0" promptText="Enter Artist" />
+            </VBox>
+
+            <VBox spacing="5">
+                <Text text="Total:" />
+                <TextField fx:id="totalField" prefWidth="100.0" promptText="Enter Total" />
+            </VBox>
+
+            <VBox spacing="5">
+                <Text text="Available:" />
+                <TextField fx:id="availableField" prefWidth="100.0" promptText="Enter Available" />
+            </VBox>
+
+            <VBox spacing="5">
+                <Text text="Rented:" />
+                <TextField fx:id="rentedField" prefWidth="100.0" promptText="Enter Rented" />
+            </VBox>
+        </VBox>
+
+        <HBox layoutX="600.0" layoutY="350.0" spacing="10">
+            <Button onAction="#addAlbum" text="Add" />
+            <Button onAction="#updateAlbum" text="Update" />
+            <Button onAction="#deleteAlbum" text="Delete" />
+        </HBox>
+
+        <Button layoutX="50.0" layoutY="350.0" onAction="#rentAlbum" text="Rent Selected" />
+    </children>
+</AnchorPane>
+
