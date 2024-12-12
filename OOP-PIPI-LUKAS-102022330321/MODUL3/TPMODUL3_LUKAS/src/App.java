@@ -9,7 +9,7 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         // Load the login page first
-        Parent root = FXMLLoader.load(getClass().getResource("tpmodul3.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/tpmodul3.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setTitle("Login");
         primaryStage.setScene(scene);
